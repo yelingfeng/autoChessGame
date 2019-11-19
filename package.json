@@ -5,12 +5,13 @@
     "bootstrap": "lerna bootstrap",
     "commit": "git-cz",
     "test": "jest",
-    "lint": "eslint \"./packages/**\" --fix"
+    "lint": "eslint \"./packages/**\" --fix",
+    "version": "lerna version --conventional-commits"
   },
   "workspaces": [
     "packages/*"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/yelingfeng/autoChessGame.git",
   "author": "yelingfeng <yelingfeng521@gmail.com>",
   "license": "MIT",
@@ -30,8 +31,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "node scripts/verifyCommit.js"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
