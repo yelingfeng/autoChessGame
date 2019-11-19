@@ -1,0 +1,52 @@
+{
+  "name": "autoChessGame",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "commit": "git-cz",
+    "test": "jest",
+    "lint": "eslint \"./packages/**\" --fix"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "version": "1.0.0",
+  "repository": "https://github.com/yelingfeng/autoChessGame.git",
+  "author": "yelingfeng <yelingfeng521@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "^6.6.0",
+    "eslint-config-ajtp": "^0.0.3",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "lerna": "^3.18.4",
+    "lint-staged": "^9.4.3",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.7.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "node scripts/verifyCommit.js"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,ts?(x)}": [
+      "prettier --write & eslint \"packages/**\" --fix",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
