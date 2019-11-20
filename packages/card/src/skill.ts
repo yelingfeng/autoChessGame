@@ -71,7 +71,7 @@ export const enum SkillModelEnum {
   REBIRTH,
   // 召唤 (从墓地随机复活一张任意卡牌进入卡牌堆中 50%)
   SUMMON,
-  // 战魂召唤 (从墓地复活一个同伴（宝物和术除外）并进入战场 70%)
+  // 战魂召唤 (从墓地复活一个同伴（宝物和术除外）并进入战场 100%)
   SOUL_SUMMON,
   // 自残 (回合结束时，自己损失1点血)
   SELF_HARM,

@@ -1,7 +1,16 @@
-import { Card } from '../src'
-import { CardType, CampEnum, RankEnum, RaceEnum, TreasureEnum, GeneralCard } from '../src/interface'
+import { Card } from '../src/base'
+import {
+  CardType,
+  CampEnum,
+  RankEnum,
+  RaceEnum,
+  TreasureEnum,
+  GeneralCard,
+  TreasureCard
+} from '../src/interface'
 import { SkillModelEnum } from '../src/skill'
 import { Generals } from '../src/generals'
+import { Treasure } from '../src/treasure'
 
 const base = {
   name: '曹操',
@@ -23,8 +32,8 @@ const base = {
   skills: [SkillModelEnum.BLADE_ARMOR, SkillModelEnum.AID_CAVALRY]
 }
 
-describe('card', () => {
-  it('test Card showSkill func', () => {
+describe('Card spec', () => {
+  it('test Card ', () => {
     const card = new Card(base)
     console.log(card.showSkill())
     expect(card.showSkill()).toBe('刃甲,激励骑兵')
@@ -41,5 +50,19 @@ describe('card', () => {
     const generals = new Generals(cc)
     console.log(generals)
     expect(generals.showTreasure()).toStrictEqual([0, 1])
+  })
+
+  it('test treasure', () => {
+    //
+    const test = {
+      name: '八阵图',
+      // 卡牌类型
+      type: CardType.TREASURE,
+      //  阵营
+      camp: CampEnum.WEI,
+      skills: [SkillModelEnum.SOUL_SUMMON]
+    } as TreasureCard
+    const T = new Treasure(test)
+    expect(T.showSkill()).toBe('战魂召唤')
   })
 })

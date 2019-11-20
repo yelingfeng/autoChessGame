@@ -85,9 +85,9 @@ export const enum TreasureEnum {
 }
 
 /**
- *  卡牌基础接口属性
+ * 基础属性接口
  */
-export interface BaseCard {
+interface BaseProperty {
   // 卡牌类型
   type: CardType
   //  阵营
@@ -96,7 +96,6 @@ export interface BaseCard {
   rank: RankEnum
   // 卡牌兵种
   race: RaceEnum
-
   // 卡牌名称
   name: string
   // 回合数
@@ -105,17 +104,36 @@ export interface BaseCard {
   HP: number
   // 护甲值
   AC: number
+}
+
+/**
+ *  卡牌基础接口属性
+ */
+export interface BaseCard extends BaseProperty {
   // 技能
   skills: Array<SkillModelEnum>
 }
 /**
  * 武将类卡接口定义
  */
-export interface GeneralCard extends BaseCard {
+export interface GeneralCard extends BaseProperty, BaseCard {
   // 携带宝物数
   treasure: number
   // 携带法术数
   magic: number
   treasureArr: Array<TreasureEnum>
   magicArr: Array<MagicEnum>
+}
+/**
+ * 宝物卡接口定义
+ */
+export interface TreasureCard {
+  // 卡牌类型
+  type: CardType
+  //  阵营
+  camp: CampEnum
+  // 卡牌名称
+  name: string
+  // 技能
+  skills: Array<SkillModelEnum>
 }
