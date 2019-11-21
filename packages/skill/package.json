@@ -1,14 +1,24 @@
 {
-  "name": "@autoChess/card",
+  "name": "@autoChess/skill",
   "version": "0.0.1",
-  "description": "@autochess/card",
+  "description": "> TODO: description",
   "author": "yelingfeng <yelingfeng521@gmail.com>",
   "homepage": "https://github.com/yelingfeng/autoChessGame#readme",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "src/skill.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yelingfeng/autoChessGame.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/yelingfeng/autoChessGame/issues"

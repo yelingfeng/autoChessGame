@@ -100,6 +100,8 @@ interface BaseProperty {
   name: string
   // 回合数
   round: number
+  // 攻击力
+  AP: number
   // 生命值
   HP: number
   // 护甲值

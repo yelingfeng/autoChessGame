@@ -24,10 +24,12 @@ const base = {
   race: RaceEnum.GENERALS,
   // 回合0数
   round: 10,
+  // 攻击
+  AP: 2,
   // 生命值
   HP: 8,
   // 护甲值
-  AC: 2,
+  AC: 0,
   // 技能
   skills: [SkillModelEnum.BLADE_ARMOR, SkillModelEnum.AID_CAVALRY]
 }
@@ -58,8 +60,9 @@ describe('Card spec', () => {
       name: '八阵图',
       // 卡牌类型
       type: CardType.TREASURE,
-      //  阵营
+      // 阵营
       camp: CampEnum.WEI,
+      // 技能
       skills: [SkillModelEnum.SOUL_SUMMON]
     } as TreasureCard
     const T = new Treasure(test)
