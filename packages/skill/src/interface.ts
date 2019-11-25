@@ -49,7 +49,7 @@ export const enum ReleaseTargetEnum {
  * name    ->  技能名称
  * desc    ->  技能描述
  * type    ->  技能类型
- * effect  ->  一组技能效果
+ * effects ->  一组技能效果
  * events  ->  事件
  * release ->  释放目标对象
  * target  ->  技能效果对象
@@ -63,7 +63,7 @@ export interface BaseSkill {
   events: []
   type: SkillTypeEnum
   probability: number
-  effect: Array<Effect>
+  effects: Array<Effect>
   release: ReleaseTargetEnum
   target: EffectTargetEnum
 }

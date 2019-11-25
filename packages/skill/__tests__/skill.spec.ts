@@ -23,11 +23,11 @@ describe('skill', () => {
       hurt: 2,
       probability: 50,
       events: [],
-      effect: [e1],
+      effects: [e1],
       release: ReleaseTargetEnum.SINGLE_ENEMY,
       target: EffectTargetEnum.ENEMY
     }
     const skill = new Skill(s1)
-    console.log(skill, s1.effect[0])
+    console.log(skill, s1.effects[0])
   })
 })

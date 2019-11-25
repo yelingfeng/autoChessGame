@@ -26,13 +26,9 @@ export const enum EffectTypeEnum {
 /**
  * 技能效果接口
  * effectType -> 技能效果类型
- * hurt -> 伤害
- * probability->释放概率
  * buff -> Buff数组
  */
 export interface Effect {
   effectType: EffectTypeEnum
-  hurt: number
-  probability: number
   buff?: Array<Buff>
 }

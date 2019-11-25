@@ -25,5 +25,8 @@
   },
   "devDependencies": {
     "@autoChess/buff": "^0.0.1"
+  },
+  "dependencies": {
+    "@types/jest": "^24.0.23"
   }
 }

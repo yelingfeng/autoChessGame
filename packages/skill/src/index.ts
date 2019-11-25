@@ -8,6 +8,6 @@ export class Skill {
   }
 
   showSkill() {
-    return this.opts.effect
+    return this.opts.effects
   }
 }
