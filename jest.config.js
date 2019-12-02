@@ -13,7 +13,7 @@ module.exports = {
   rootDir: __dirname,
   // 源代码中相同的 `@` -> `src` 别名
   moduleNameMapper: {
-    '^@autoChess/(.*?)$': '<rootDir>/packages/$1/src'
+    '^@autochess/(.*?)$': '<rootDir>/packages/$1/src'
   },
   testMatch: ['<rootDir>/packages/**/__tests__/**/*spec.[jt]s?(x)']
 }

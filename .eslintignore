@@ -1,3 +1,4 @@
 node_modules
 *.md
 package.json
+.DS_Store
