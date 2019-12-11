@@ -1,6 +1,4 @@
 module.exports = {
   extends: ['ajtp'],
-  globals: {
-    Phaser: true
-  }
+  plugins: ['html']
 }

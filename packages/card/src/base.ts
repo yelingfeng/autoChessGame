@@ -1,4 +1,4 @@
-import { skillMessage } from '@autochess/skill'
+import { getSkillName } from '@autochess/skill'
 import { NormalCard } from './interface'
 
 /**
@@ -17,7 +17,7 @@ export class Card {
 
   showSkill() {
     const skillmsg = this.opts.skills.map(it => {
-      return skillMessage[it]
+      return getSkillName(it)
     })
     return skillmsg.join(',')
   }

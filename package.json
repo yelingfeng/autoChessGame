@@ -6,8 +6,7 @@
     "commit": "git-cz",
     "test": "jest",
     "lint": "eslint \"./packages/**\" --fix",
-    "version": "lerna version --conventional-commits",
-    "gamedev": "webpack-dev-server --mode=development --open"
+    "version": "lerna version --conventional-commits"
   },
   "workspaces": [
     "packages/*"
@@ -22,6 +21,7 @@
     "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.6.0",
     "eslint-config-ajtp": "^0.0.3",
+    "eslint-plugin-html": "^6.0.0",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "lerna": "^3.18.4",
@@ -37,12 +37,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,json,md}": [
+    "*.{js,ts?(x),json,md}": [
       "prettier --write",
-      "git add"
-    ],
-    "*.{js,ts?(x)}": [
-      "eslint \"packages/**\" --fix",
       "git add"
     ]
   },

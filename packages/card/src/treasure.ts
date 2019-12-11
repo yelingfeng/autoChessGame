@@ -1,7 +1,7 @@
 /**
  * 宝物卡
  */
-import { skillMessage } from '@autochess/skill'
+import { getSkillName } from '@autochess/skill'
 import { CostCard } from './interface/costCard'
 /**
  * 宝物卡
@@ -15,7 +15,7 @@ export class Treasure {
 
   showSkill() {
     const skillmsg = this.opts.skills.map(it => {
-      return skillMessage[it]
+      return getSkillName(it)
     })
     return skillmsg.join(',')
   }

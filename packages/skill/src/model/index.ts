@@ -2,7 +2,7 @@ import { SkillModelEnum } from '../enum'
 /**
  * 技能枚举对应中文名
  */
-const skillMessage: { [code: number]: string } = {
+const skillMessage: { [code: string]: string } = {
   [SkillModelEnum.FLY]: '飞行',
   [SkillModelEnum.FLAME]: '火焰',
   [SkillModelEnum.LANCE]: '长枪击',
@@ -63,6 +63,6 @@ const skillMessage: { [code: number]: string } = {
  * 获取技能名称
  * @param code
  */
-export const getSkillName = (code: number): string => {
+export const getSkillName = (code: string): string => {
   return skillMessage[code]
 }
