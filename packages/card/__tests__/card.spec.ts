@@ -1,14 +1,10 @@
+import { SkillModelEnum } from '@autochess/skill'
+import { CardType, CampType, RarityType, RaceType } from '../src/enum/card'
+import { GeneralCard } from '../src/interface/generalCard'
+import { CostCard } from '../src/interface/costCard'
+import { NormalCard } from '../src/interface/normalCard'
+import { TreasureEnum } from '../src/enum/treasure'
 import { Card } from '../src/base'
-import {
-  CardType,
-  CampEnum,
-  RankEnum,
-  RaceEnum,
-  TreasureEnum,
-  GeneralCard,
-  TreasureCard
-} from '../src/interface'
-import { SkillModelEnum } from '../src/skill'
 import { Generals } from '../src/generals'
 import { Treasure } from '../src/treasure'
 
@@ -17,11 +13,11 @@ const base = {
   // 卡牌类型
   type: CardType.GENERALS,
   //  阵营
-  camp: CampEnum.WEI,
+  camp: CampType.WEI,
   // 卡牌等级
-  rank: RankEnum.EPIC,
+  rarity: RarityType.EPIC,
   // 卡牌兵种
-  race: RaceEnum.GENERALS,
+  race: RaceType.GENERALS,
   // 回合0数
   round: 10,
   // 攻击
@@ -32,7 +28,7 @@ const base = {
   AC: 0,
   // 技能
   skills: [SkillModelEnum.BLADE_ARMOR, SkillModelEnum.AID_CAVALRY]
-}
+} as NormalCard
 
 describe('Card spec', () => {
   it('test Card ', () => {
@@ -47,6 +43,7 @@ describe('Card spec', () => {
       treasure: 2,
       magic: 0,
       treasureArr: [TreasureEnum.FTHJ, TreasureEnum.QLYYD],
+      magicArr: [],
       ...base
     } as GeneralCard
     const generals = new Generals(cc)
@@ -61,10 +58,10 @@ describe('Card spec', () => {
       // 卡牌类型
       type: CardType.TREASURE,
       // 阵营
-      camp: CampEnum.WEI,
+      camp: CampType.WEI,
       // 技能
       skills: [SkillModelEnum.SOUL_SUMMON]
-    } as TreasureCard
+    } as CostCard
     const T = new Treasure(test)
     expect(T.showSkill()).toBe('战魂召唤')
   })

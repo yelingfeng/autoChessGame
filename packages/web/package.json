@@ -1,17 +1,23 @@
 {
-  "name": "@autochess/game",
-  "version": "0.0.1",
+  "name": "@autochess/web",
+  "version": "1.0.0",
   "author": "yelingfeng <yelingfeng521@gmail.com>",
   "homepage": "https://github.com/yelingfeng/autoChessGame#readme",
   "license": "MIT",
-  "main": "src/index.ts",
+  "main": "lib/index.js",
   "directories": {
     "src": "src",
     "test": "__tests__"
   },
+  "files": [
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yelingfeng/autoChessGame.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/yelingfeng/autoChessGame/issues"

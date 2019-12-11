@@ -15,7 +15,5 @@
   "bugs": {
     "url": "https://github.com/yelingfeng/autoChessGame/issues"
   },
-  "dependencies": {
-    "@types/jest": "^24.0.23"
-  }
+  "dependencies": {}
 }

@@ -1,4 +1,4 @@
-import { GeneralCard } from './interface'
+import { GeneralCard } from './interface/generalCard'
 /**
  * 武将卡
  * [

@@ -1,13 +1,17 @@
-import { BaseCard } from './interface'
-import { skillMessage } from './skill'
+import { skillMessage } from '@autochess/skill'
+import { NormalCard } from './interface'
 
 /**
- * 卡牌类
+ * 普通卡牌类
+ * [
+ *  技能
+ *  回合    攻击/血量
+ * ]
  */
 export class Card {
-  private opts: BaseCard
+  private opts: NormalCard
 
-  constructor(opts: BaseCard) {
+  constructor(opts: NormalCard) {
     this.opts = opts
   }
 

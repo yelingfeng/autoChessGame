@@ -1,5 +1,5 @@
 {
-  "name": "@autochess/skill",
+  "name": "@autochess/effect",
   "version": "0.0.1",
   "author": "yelingfeng <yelingfeng521@gmail.com>",
   "homepage": "https://github.com/yelingfeng/autoChessGame#readme",
@@ -16,16 +16,8 @@
     "type": "git",
     "url": "git+https://github.com/yelingfeng/autoChessGame.git"
   },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  },
+  "scripts": {},
   "bugs": {
     "url": "https://github.com/yelingfeng/autoChessGame/issues"
-  },
-  "devDependencies": {},
-  "dependencies": {
-    "@autochess/effect": "^0.0.1",
-    "@autochess/buff": "^0.0.1",
-    "@autochess/card": "^0.0.1"
   }
 }

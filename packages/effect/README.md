@@ -1,11 +1,11 @@
-# `game`
+# `effect`
 
 > TODO: description
 
 ## Usage
 
 ```
-const game = require('game');
+const effect = require('effect');
 
 // TODO: DEMONSTRATE API
 ```

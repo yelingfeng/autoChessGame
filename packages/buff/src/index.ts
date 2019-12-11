@@ -27,9 +27,11 @@ export const enum BehaviorEnum {
 /**
  *  buff接口
  *  behavior -> 行为
+ *  probability -> 释放概率
  *  time -> 持续时间
  */
 export interface Buff {
   behavior: BehaviorEnum
+  probability: number
   time: number
 }

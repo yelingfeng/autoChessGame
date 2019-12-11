@@ -1,3 +1,6 @@
 module.exports = {
-  extends: ['ajtp']
+  extends: ['ajtp'],
+  globals: {
+    Phaser: true
+  }
 }

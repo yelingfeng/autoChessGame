@@ -13,10 +13,6 @@
   "bugs": {
     "url": "https://github.com/yelingfeng/autoChessGame/issues"
   },
-  "devDependencies": {
-    "@autoChess/buff": "^0.0.1"
-  },
-  "dependencies": {
-    "@types/jest": "^24.0.23"
-  }
+  "devDependencies": {},
+  "dependencies": {}
 }

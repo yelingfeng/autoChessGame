@@ -1,13 +1,15 @@
 /**
  * 宝物卡
  */
-import { TreasureCard } from './interface'
-import { skillMessage } from './skill'
-
+import { skillMessage } from '@autochess/skill'
+import { CostCard } from './interface/costCard'
+/**
+ * 宝物卡
+ */
 export class Treasure {
-  private opts: TreasureCard
+  private opts: CostCard
 
-  constructor(opts: TreasureCard) {
+  constructor(opts: CostCard) {
     this.opts = opts
   }
 

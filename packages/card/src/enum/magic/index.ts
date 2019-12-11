@@ -1,0 +1,1 @@
+export { MagicEnum } from './magic'

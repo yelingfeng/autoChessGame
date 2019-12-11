@@ -1,4 +1,3 @@
-import { Buff } from '@autoChess/buff'
 /**
  * 技能效果 类型
  * RACE    -> 种族技能(专属的技能 包括飞行 种族克制)
@@ -14,6 +13,7 @@ import { Buff } from '@autoChess/buff'
  * OTHER -> 其他类特殊buff
  */
 export const enum EffectTypeEnum {
+  RACE,
   CONTROL,
   MORALE,
   WEAKEN,
@@ -22,13 +22,4 @@ export const enum EffectTypeEnum {
   BASE_BUFF,
   STATUS_BUFF,
   OTHER
-}
-/**
- * 技能效果接口
- * effectType -> 技能效果类型
- * buff -> Buff数组
- */
-export interface Effect {
-  effectType: EffectTypeEnum
-  buff?: Array<Buff>
 }

@@ -6,7 +6,8 @@
     "commit": "git-cz",
     "test": "jest",
     "lint": "eslint \"./packages/**\" --fix",
-    "version": "lerna version --conventional-commits"
+    "version": "lerna version --conventional-commits",
+    "gamedev": "webpack-dev-server --mode=development --open"
   },
   "workspaces": [
     "packages/*"
@@ -27,6 +28,7 @@
     "lint-staged": "^9.4.3",
     "prettier": "^1.19.1",
     "ts-jest": "^24.2.0",
+    "ts-loader": "^6.2.1",
     "typescript": "^3.7.2"
   },
   "husky": {

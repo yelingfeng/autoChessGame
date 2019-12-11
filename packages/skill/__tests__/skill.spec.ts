@@ -1,17 +1,17 @@
 import { Buff, BehaviorEnum } from '@autoChess/buff'
+import { Effect } from '@autochess/effect'
 import { Skill } from '../src'
-import { Effect, EffectTypeEnum } from '../src/effect'
-import { SkillTypeEnum, EffectTargetEnum, ReleaseTargetEnum, BaseSkill } from '../src/interface'
+import { SkillTypeEnum, EffectTargetEnum, ReleaseScopeEnum } from '../src/enum'
+import { BaseSkill } from '../src/interface'
 
 describe('skill', () => {
   it('test skill effect', () => {
     const e1 = {
-      // 控制类
-      effectType: EffectTypeEnum.CONTROL,
       // buff 是禁止一回合行动
       buff: [
         {
           behavior: BehaviorEnum.STOP_ACTION,
+          probability: 50,
           time: 1
         } as Buff
       ]
@@ -21,10 +21,8 @@ describe('skill', () => {
       desc: '对一个随机敌人造成伤害，并有50%几率冰冻敌人，使其失去下回合行动能力',
       type: SkillTypeEnum.ACTIVE,
       hurt: 2,
-      probability: 50,
-      events: [],
       effects: [e1],
-      release: ReleaseTargetEnum.SINGLE_ENEMY,
+      scope: ReleaseScopeEnum.SINGLE_ENEMY,
       target: EffectTargetEnum.ENEMY
     }
     const skill = new Skill(s1)
