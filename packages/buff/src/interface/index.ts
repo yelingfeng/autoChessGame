@@ -24,4 +24,5 @@ export interface Buff extends Base {
  */
 export interface ComboBuff extends Base {
   buffs: Array<Buff>
+  behavior?: BehaviorEnum
 }

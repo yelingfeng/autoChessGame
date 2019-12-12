@@ -22,7 +22,9 @@ export enum BehaviorEnum {
   // 减少护甲值
   REDUCE_AC = 'REDUCE_AC',
   // 禁止行动
-  STOP_ACTION = 'STOP_ACTION'
+  STOP_ACTION = 'STOP_ACTION',
+  // 飞行模式
+  FLY = 'FLY'
 }
 
 /**
