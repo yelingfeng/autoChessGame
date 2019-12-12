@@ -1,4 +1,4 @@
-import { Buff } from '@autochess/buff'
+import { IBuff } from '@autochess/buff'
 import { EffectTypeEnum } from './enum/index'
 
 /**
@@ -8,5 +8,5 @@ import { EffectTypeEnum } from './enum/index'
  */
 export interface Effect {
   effectType: EffectTypeEnum
-  buff?: Array<Buff>
+  buff?: Array<IBuff>
 }

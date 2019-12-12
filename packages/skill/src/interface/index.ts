@@ -1,5 +1,5 @@
 import { Effect } from '@autochess/effect'
-import { RaceEnum } from '@autochess/card'
+import { RaceType } from '@autochess/card'
 import { SkillTypeEnum, ReleaseScopeEnum, EffectTargetEnum } from '../enum'
 
 /**
@@ -7,7 +7,7 @@ import { SkillTypeEnum, ReleaseScopeEnum, EffectTargetEnum } from '../enum'
  * name    ->  技能名称
  * desc    ->  技能描述
  * type    ->  技能类型
- * effects ->  一组技能效果
+ * effects ->  技能效果
  * scope   ->  释放目标范围
  * target  ->  技能效果对象
  */
@@ -23,7 +23,11 @@ export interface BaseSkill {
 
 /**
  * 兵种类技能
+ * 每个种族存在互相克制的定义
+ *
+ *
  */
 export interface RaceSkill extends BaseSkill {
-  targets: Array<RaceEnum>
+  // 克制的种族集合
+  race_targets: Array<RaceType>
 }

@@ -1,4 +1,4 @@
-import { FlyModel } from '../src/model/fly'
+import { FlyModel } from '../src/model/race/fly'
 import { SkillModelEnum, SkillTypeEnum } from '../src/enum'
 
 describe('model test', () => {
