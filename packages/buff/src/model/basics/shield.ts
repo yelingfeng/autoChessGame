@@ -1,9 +1,12 @@
 import { ComboBuff } from '../../interface'
-import { AlawysAddAC } from './base'
+import { AddACLast } from '../computed'
 /**
- * 盾防BUFF
- * +1 防御值
+ * 盾防BUFF模型
+ * @param value
+ * @desc 永久增加{value}防御
  */
-export const Shield: ComboBuff = {
-  buffs: [AlawysAddAC]
+export const ShieldModel = (value: number): ComboBuff => {
+  return {
+    buffs: [AddACLast(value)]
+  }
 }

@@ -1,9 +1,12 @@
 import { ComboBuff } from '../../interface'
-import { AlwaysAddAP } from './base'
+import { AddAPLast } from '../computed'
 /**
- * 攻击buff
- * 增加1攻击
+ * 攻击buff 模型
+ * @value
+ * @desc 增加{value}攻击
  */
-export const Attact: ComboBuff = {
-  buffs: [AlwaysAddAP]
+export const AttactModel = (value: number): ComboBuff => {
+  return {
+    buffs: [AddAPLast(value)]
+  }
 }

@@ -1,9 +1,11 @@
 import { ComboBuff } from '../../interface'
-import { FlyStatus } from './base'
+import { FlyStatus } from '../computed'
 /**
- * 飞行
- * 增加飞行能力
+ * 飞行buff模型
+ * @desc 增加飞行能力
  */
-export const Fly: ComboBuff = {
-  buffs: [FlyStatus]
+export const FlyModel = (): ComboBuff => {
+  return {
+    buffs: [FlyStatus()]
+  }
 }

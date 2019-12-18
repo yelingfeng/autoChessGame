@@ -28,9 +28,9 @@ export enum BehaviorEnum {
 }
 
 /**
- * 时间类型
+ * 持续时间类型
  */
-export enum TimeType {
+export enum ContinueType {
   // NONE
   NONE = 'NONE',
   // 一次

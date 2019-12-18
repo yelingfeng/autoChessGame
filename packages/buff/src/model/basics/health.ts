@@ -1,9 +1,12 @@
 import { ComboBuff } from '../../interface'
-import { AlawysAddHP } from './base'
+import { AddHPLast } from '../computed'
 /**
- * 丹术buff
- * 每回合1回血
+ * 加血buff模型
+ * @param value
+ * @desc 每回合回{value}血
  */
-export const Health: ComboBuff = {
-  buffs: [AlawysAddHP]
+export const HealthModel = (value: number): ComboBuff => {
+  return {
+    buffs: [AddHPLast(value)]
+  }
 }

@@ -1,4 +1,4 @@
-import { SkillModelEnum, SkillTypeEnum } from '../enum'
+import { SkillModelEnum, SkillTypeEnum } from '../../enum'
 /**
  * 冰冻模型
  */

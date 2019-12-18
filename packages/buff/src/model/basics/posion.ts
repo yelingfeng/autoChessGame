@@ -1,10 +1,13 @@
 import { ComboBuff } from '../../interface'
-import { AlwaysReduceHP } from './base'
+import { ReduceHPLast } from '../computed'
 
 /**
- * 中毒buff
- * 下回合开始持续减血
+ * 中毒buff模型
+ * @param value
+ * @desc 下回合开始 每回合减{value}HP血量
  */
-export const Posion: ComboBuff = {
-  buffs: [AlwaysReduceHP]
+export const PosionModel = (value: number): ComboBuff => {
+  return {
+    buffs: [ReduceHPLast(value)]
+  }
 }

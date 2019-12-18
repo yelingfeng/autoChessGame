@@ -4,7 +4,7 @@
   "author": "yelingfeng <yelingfeng521@gmail.com>",
   "homepage": "https://github.com/yelingfeng/autoChessGame#readme",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "directories": {
     "src": "src",
     "test": "__tests__"

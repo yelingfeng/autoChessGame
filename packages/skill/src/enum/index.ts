@@ -18,7 +18,7 @@ export const enum SkillModelEnum {
   SHIELD = 'SHIELD',
   // 冲阵 (随机减少准备区中一个同伴的等待回合数)
   RUSH = 'RUSH',
-  // 偷袭 (第一次攻击并命中敌人后造成额外2点伤害)
+  // 偷袭 (第一次攻击并命中敌人后造成额外1点伤害)
   SNEAK_ATTACK = 'SNEAK_ATTACK',
   // 蛊惑(增加一个准备区域中的随机敌人准备2个回合数)
   BEWITCH = 'BEWITCH',

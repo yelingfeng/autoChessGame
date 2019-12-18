@@ -1,4 +1,4 @@
-import { BehaviorEnum, TimeType } from '../enum'
+import { BehaviorEnum, ComputedReturn } from '../enum'
 /**
  *  基础功能
  *  probability -> 释放概率
@@ -6,7 +6,7 @@ import { BehaviorEnum, TimeType } from '../enum'
  */
 interface Base {
   probability?: number
-  time?: TimeType
+  time?: ComputedReturn
 }
 
 /**
