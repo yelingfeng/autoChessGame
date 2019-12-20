@@ -10,6 +10,53 @@ export const FlyStatus = (): Buff => {
 }
 
 /**
+ * 增加士气
+ * @param value
+ */
+export const AddMorale = (value: number): Buff => {
+  return {
+    behavior: BehaviorEnum.ADD_MORALE,
+    time: ContinueType.ONCE,
+    value
+  }
+}
+
+/**
+ * 减少士气
+ * @param value
+ */
+export const ReduceMorale = (value: number): Buff => {
+  return {
+    behavior: BehaviorEnum.REDUCE_MORALE,
+    time: ContinueType.ONCE,
+    value
+  }
+}
+
+/**
+ * 增加回合数
+ * @param value
+ */
+export const AddRound = (value: number): Buff => {
+  return {
+    behavior: BehaviorEnum.ADD_ROUND,
+    time: ContinueType.ONCE,
+    value
+  }
+}
+/**
+ * 减少回合数
+ * @param value
+ */
+export const ReduceRound = (value: number): Buff => {
+  return {
+    behavior: BehaviorEnum.REDUCE_ROUND,
+    time: ContinueType.ONCE,
+    value
+  }
+}
+
+/**
  * 禁止一回合
  * @param value
  */
