@@ -2,9 +2,14 @@
   "name": "@autochess/web",
   "version": "1.0.0",
   "author": "yelingfeng <yelingfeng521@gmail.com>",
-  "homepage": "https://github.com/yelingfeng/autoChessGame#readme",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "src/index.ts",
+  "scripts": {
+    "build:dev": "webpack --env dev",
+    "build:prod": "webpack --env prod",
+    "start": "webpack-dev-server -d --env dev",
+    "watch": "webpack --env dev --watch"
+  },
   "directories": {
     "src": "src",
     "test": "__tests__"
@@ -16,10 +21,20 @@
     "type": "git",
     "url": "git+https://github.com/yelingfeng/autoChessGame.git"
   },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+  "devDependencies": {
+    "@types/node": "^13.1.0",
+    "@types/webpack": "^4.41.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "raw-loader": "^4.0.0",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.5.4",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   },
-  "bugs": {
-    "url": "https://github.com/yelingfeng/autoChessGame/issues"
+  "dependencies": {
+    "phaser": "^3.21.0"
   }
 }

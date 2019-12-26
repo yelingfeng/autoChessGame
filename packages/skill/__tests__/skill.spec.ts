@@ -1,5 +1,5 @@
-import { Buff, BehaviorEnum } from '@autoChess/buff'
-import { Effect } from '@autochess/effect'
+import { ForzenModel } from '@autoChess/buff'
+import { Effect, EffectTypeEnum } from '@autochess/effect'
 import { Skill } from '../src'
 import { SkillTypeEnum, EffectTargetEnum, ReleaseScopeEnum } from '../src/enum'
 import { BaseSkill } from '../src/interface'
@@ -7,14 +7,8 @@ import { BaseSkill } from '../src/interface'
 describe('skill', () => {
   it('test skill effect', () => {
     const e1 = {
-      // buff 是禁止一回合行动
-      buff: [
-        {
-          behavior: BehaviorEnum.STOP_ACTION,
-          probability: 50,
-          time: 1
-        } as Buff
-      ]
+      effectType: EffectTypeEnum.CONTROL,
+      buff: ForzenModel(2)
     } as Effect
     const s1: BaseSkill = {
       name: '冰封',

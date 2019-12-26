@@ -17,11 +17,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "paths": {
-      "@autochess/card": ["packages/card/src"],
-      "@autochess/buff": ["packages/buff/src"],
-      "@autochess/skill": ["packages/skill/src"],
-      "@autochess/game": ["packages/game/src"],
-      "@autochess/effect": ["packages/effect/src"]
+      "@autochess/*": ["packages/*/src"]
     }
   },
   "include": ["packages/*/src", "packages/*/__tests__"]
